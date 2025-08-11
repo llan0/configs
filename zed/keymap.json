@@ -1,0 +1,44 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-l": "workspace::ToggleLeftDock", // open/close left pane
+      "cmd-b": null, // disable default cmd-b
+      "cmd-j": null, // disable terminal toggle
+
+      // Disable default pane-switching/splitting
+      "cmd-1": null,
+      "cmd-2": null,
+      "cmd-3": null,
+      "cmd-4": null,
+      "cmd-5": null,
+      "cmd-6": null,
+      "cmd-7": null,
+      "cmd-8": null,
+      "cmd-9": null
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "g c": "editor::ToggleComments",
+      "space e": "editor::Hover",
+
+      "cmd-l": "workspace::ToggleLeftDock", // open/close left pane
+      "cmd-b": null, // disable default cmd-b
+
+      // Buffer
+      "s v": "pane::SplitRight",
+      "s d": "pane::SplitDown",
+      "s l": "workspace::ActivatePaneRight",
+      "s h": "workspace::ActivatePaneLeft",
+      "s k": "workspace::ActivatePaneUp",
+      "s j": "workspace::ActivatePaneDown",
+
+      // move line up or down
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    }
+  }
+]

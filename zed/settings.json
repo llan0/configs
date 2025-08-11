@@ -1,0 +1,50 @@
+// Zed settings
+{
+  // disable autocomplete
+  "agent": {
+    "default_profile": "ask",
+    "always_allow_tool_actions": true
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "show_edit_predictions": false,
+  "show_completions_on_input": true,
+
+  // Default terminal to bottom
+  "terminal": {
+    "dock": "bottom"
+  },
+
+  "telemetry": {
+    "metrics": true
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Hard"
+  },
+
+  // Go-specific settings
+  "languages": {
+    "Go": {
+      "lsp": {
+        "initialization_options": {}
+      }
+    }
+  },
+
+  // Global hints
+  "hints": {
+    "assignVariableTypes": true,
+    "compositeLiteralFields": true,
+    "compositeLiteralTypes": true,
+    "constantValues": true,
+    "functionTypeParameters": true,
+    "parameterNames": true,
+    "rangeVariableTypes": true
+  }
+}
