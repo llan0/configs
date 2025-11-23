@@ -1,0 +1,79 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-l": "workspace::ToggleLeftDock",
+      "cmd-b": null,
+      "cmd-j": null,
+      "cmd-1": null,
+      "cmd-2": null,
+      "cmd-3": null,
+      "cmd-4": null,
+      "cmd-5": null,
+      "cmd-6": null,
+      "cmd-7": null,
+      "cmd-8": null,
+      "cmd-9": null
+    }
+  },
+
+  {
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-backspace": ["project_panel::Trash", { "skip_prompt": false }],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
+
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space h": "editor::Hover",
+
+      "cmd-l": "workspace::ToggleLeftDock",
+      "cmd-b": null,
+
+      "s v": "pane::SplitRight",
+      "s d": "pane::SplitDown",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+
+      "cmd-i": [
+        "assistant::InlineAssist",
+        {
+          "prompt": "Help me understand this code snippet. What exactly is it doing? Be concise and to the point."
+        }
+      ]
+    }
+  },
+
+  {
+    "context": "ProjectPanel && vim_mode == normal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  }
+]
