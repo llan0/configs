@@ -3,11 +3,9 @@
     "context": "Workspace",
     "bindings": {
       "cmd-t": "workspace::ToggleBottomDock",
-      "cmd-l": "workspace::ToggleLeftDock", // open/close left pane
-      "cmd-b": null, // disable default cmd-b
-      "cmd-j": null, // disable terminal toggle
-
-      // Disable default pane-switching/splitting
+      "cmd-l": "workspace::ToggleLeftDock",
+      "cmd-b": null,
+      "cmd-j": null,
       "cmd-1": null,
       "cmd-2": null,
       "cmd-3": null,
@@ -19,26 +17,63 @@
       "cmd-9": null
     }
   },
+
   {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
     "bindings": {
-      "g c": "editor::ToggleComments",
-      "space e": "editor::Hover",
+      "cmd-backspace": ["project_panel::Trash", { "skip_prompt": false }],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
 
-      "cmd-l": "workspace::ToggleLeftDock", // open/close left pane
-      "cmd-b": null, // disable default cmd-b
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
 
-      // Buffer
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space h": "editor::Hover",
+
+      "cmd-l": "workspace::ToggleLeftDock",
+      "cmd-b": null,
+
       "s v": "pane::SplitRight",
       "s d": "pane::SplitDown",
-      "s l": "workspace::ActivatePaneRight",
-      "s h": "workspace::ActivatePaneLeft",
-      "s k": "workspace::ActivatePaneUp",
-      "s j": "workspace::ActivatePaneDown",
 
-      // move line up or down
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
       "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
+      "shift-k": "editor::MoveLineUp",
+
+      "cmd-i": [
+        "assistant::InlineAssist",
+        {
+          "prompt": "Help me understand this code snippet. What exactly is it doing? Be concise and to the point."
+        }
+      ]
+    }
+  },
+
+  {
+    "context": "ProjectPanel && vim_mode == normal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   }
 ]
