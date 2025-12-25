@@ -1,7 +1,14 @@
 // Zed settings
 {
   // disable autocomplete
+  "vim_mode": true,
+  "helix_mode": false,
+  "icon_theme": "Colored Zed Icons Theme Light",
   "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
     "default_profile": "ask",
     "always_allow_tool_actions": true
   },
@@ -19,20 +26,27 @@
   "telemetry": {
     "metrics": true
   },
-  "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "VSCode Dark Polished"
   },
 
-  // Go-specific settings
+  // language specific settings
   "languages": {
     "Go": {
       "lsp": {
         "initialization_options": {}
+      }
+    },
+    "SQL": {
+      "formatter": {
+        "external": {
+          "command": "sql-formatter",
+          "arguments": ["--language", "postgresql"]
+        }
       }
     }
   },

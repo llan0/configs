@@ -14,8 +14,8 @@
       "cmd-6": null,
       "cmd-7": null,
       "cmd-8": null,
-      "cmd-9": null
-    }
+      "cmd-9": null,
+    },
   },
 
   {
@@ -26,16 +26,16 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
 
   {
     "context": "Terminal",
     "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight"
-    }
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
   },
 
   {
@@ -61,19 +61,18 @@
       "cmd-i": [
         "assistant::InlineAssist",
         {
-          "prompt": "Help me understand this code snippet. What exactly is it doing? Be concise and to the point."
-        }
-      ]
-    }
+          "prompt": "Help me understand this code snippet. What exactly is it doing? Be concise and to the point.",
+        },
+      ],
+    },
   },
-
   {
     "context": "ProjectPanel && vim_mode == normal",
     "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
-  }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
 ]
