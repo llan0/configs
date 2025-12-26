@@ -7,48 +7,57 @@
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5-mini",
     },
     "default_profile": "ask",
-    "always_allow_tool_actions": true
+    "always_allow_tool_actions": true,
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
   },
   "show_edit_predictions": false,
   "show_completions_on_input": true,
 
+  // override theme colors
+  "theme_overrides": {
+    "Fleet Dark": {
+      "editor.background": "#181818",
+      "editor.gutter.background": "#181818",
+      "panel.background": "#181818",
+    },
+  },
+
   // Default terminal to bottom
   "terminal": {
-    "dock": "bottom"
+    "dock": "bottom",
   },
 
   "telemetry": {
-    "metrics": true
+    "metrics": true,
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "VSCode Dark Polished"
+    "dark": "Fleet Dark",
   },
 
   // language specific settings
   "languages": {
     "Go": {
       "lsp": {
-        "initialization_options": {}
-      }
+        "initialization_options": {},
+      },
     },
     "SQL": {
       "formatter": {
         "external": {
           "command": "sql-formatter",
-          "arguments": ["--language", "postgresql"]
-        }
-      }
-    }
+          "arguments": ["--language", "postgresql"],
+        },
+      },
+    },
   },
 
   // Global hints
@@ -59,6 +68,6 @@
     "constantValues": true,
     "functionTypeParameters": true,
     "parameterNames": true,
-    "rangeVariableTypes": true
-  }
+    "rangeVariableTypes": true,
+  },
 }
