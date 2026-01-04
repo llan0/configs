@@ -15,6 +15,14 @@
       "cmd-7": null,
       "cmd-8": null,
       "cmd-9": null,
+      "cmd-p": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" },
+      ],
+      "cmd-shift-g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" },
+      ],
     },
   },
 
@@ -47,8 +55,8 @@
       "cmd-l": "workspace::ToggleLeftDock",
       "cmd-b": null,
 
-      "s v": "pane::SplitRight",
-      "s d": "pane::SplitDown",
+      "\"": "pane::SplitRight",
+      "|": "pane::SplitDown",
 
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",

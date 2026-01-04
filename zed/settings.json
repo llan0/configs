@@ -1,4 +1,3 @@
-// Zed settings
 {
   // disable autocomplete
   "vim_mode": true,
@@ -19,17 +18,34 @@
   "show_completions_on_input": true,
 
   // override theme colors
+
   "theme_overrides": {
-    "Fleet Dark": {
+    "VSCode Dark Polished": {
       "editor.background": "#181818",
       "editor.gutter.background": "#181818",
       "panel.background": "#181818",
+      "terminal.background": "#181818",
+      "background": "#181818",
+      "syntax": {
+        "string": {
+          "color": "#accb6d",
+        },
+        "string.escape": {
+          "color": "#accb6d",
+        },
+      },
     },
   },
 
   // Default terminal to bottom
   "terminal": {
     "dock": "bottom",
+    "shell": {
+      "with_arguments": {
+        "program": "/bin/zsh",
+        "args": ["-c", "tmux new-session -A -s \"$(basename \"$PWD\")\""],
+      },
+    },
   },
 
   "telemetry": {
@@ -38,9 +54,9 @@
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Fleet Dark",
+    "dark": "VSCode Dark Polished",
   },
 
   // language specific settings
