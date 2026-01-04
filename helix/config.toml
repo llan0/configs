@@ -2,6 +2,7 @@ theme = "fleet_dark"
 
 [editor]
 line-number = "relative"
+bufferline = "always"
 evil = true
 
 [editor.cursor-shape]
@@ -20,7 +21,7 @@ X = "extend_line_above"
 # move lines up and down holding Ctrl
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
- 
-[keys.insert]
-# In insert mode, escape to normal, save, and return to insert
-Cmd-s = ["normal_mode", ":w", "insert_mode"]
+
+[keys.normal.space]
+x = ":buffer-close" 
+
